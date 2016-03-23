@@ -1,0 +1,20 @@
+===================================================================
+v 1.1.0 - 17 December 2014
+-------------------------------------------------------------------
+NEW    - Boxed layout option with ‘boxed-layout’ class on body
+NEW    - Disable loader option with ‘no-loader’ class on body
+FIX    - IE menu scrolling bug
+FIX    - IE9 placeholders and offscreen menu
+UPDATE - Variant 2.0: Updated design
+UPDATE - Improved slider image appearance on page load
+
+
+Files affected:
+-------------------------------------------------------------------
+-    js/scripts.js
+-    variant/*
+
+New files:
+
+-    ie9.css
+===================================================================
