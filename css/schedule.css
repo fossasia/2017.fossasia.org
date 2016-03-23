@@ -1,0 +1,108 @@
+/* Offsets for fixed navbar */
+body {
+  margin-top: 50px;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden;
+}
+
+/* Adjust styling to main page theme */
+body {
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #777777;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #333333;
+  font-weight: 300;
+}
+
+a {
+  color: #777;
+}
+
+a:hover {
+  color: #e12b00;
+  text-decoration: none;
+}
+
+/* Social media icons for speakers */
+a.speaker-social {
+  margin-right: 0.3em;
+}
+
+a.speaker-social:hover {
+  text-decoration: none;
+}
+
+/* Navbar adjustments */
+.logo {
+  max-width: 110px;
+  max-height: 45px;
+}
+
+.navbar-toggle {
+  padding: 6px 10px;
+  color: #777;
+}
+
+/* General styling of session list */
+.session-list li {
+  cursor: pointer;
+}
+
+.session-list .label {
+  background: #e12b00;
+  border-color: #ebccd1;
+  color: #ffff;
+  font-weight: 500;
+}
+
+.session-list .session-title {
+  margin-top: 0.1em;
+}
+
+.session-list .session-title .session-link {
+  font-size: 12px;
+}
+
+/* Adjustments for smaller screens */
+body {
+  font-size: 12px;
+}
+
+.session-list .label {
+  font-size: 80%;
+  margin-left: -8px;
+}
+
+.session-location {
+  text-align: left;
+}
+
+@media (min-width: 450px) {
+  body {
+    font-size: 14px
+  }
+
+  .session-list .label {
+    font-size: 90%;
+    padding: .2em .6em .3em;
+  }
+
+  .session-title {
+    float:left;
+    width: 75%;
+  }
+
+  .session-location {
+    float: right;
+    width: 25%;
+    text-align: right;
+  }
+}

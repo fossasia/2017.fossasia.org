@@ -1,0 +1,120 @@
+.schedule a {
+  color: white;
+  border: none;
+}
+
+.schedule a:hover {
+  color: white;
+  text-decoration: none;
+  border: none;
+};
+
+.schedule a:active {
+  color: white;
+  text-decoration: underline;
+  border: none;
+}
+
+.schedule a:visited {
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.tweets-feed {
+  color: #FFFFFF;
+  line-height: 30px;
+  font-size: 20px;
+  transition: opacity 0.2s linear;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.tweets-feed a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight:700;
+}
+
+.tweets-feed a:hover {
+  color: #FFFFFF;
+}
+
+.tweets-feed .dateTweeted {
+  font-size: 15px;
+  display: block;
+}
+
+.icon.social_rss {
+  display: block;
+  margin: 20px 0 10px;
+}
+
+#result {
+  overflow: hidden;
+}
+
+#result a, #result h3, #result h4 {
+  color: #fff !important;
+}
+
+#result h4 {
+  font-size: 1em;
+  padding: 10px 0;
+}
+
+.post {
+  display: none;
+  padding: 20px 0;
+}
+
+.post > .content {
+  line-height: 1.2;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 1.2em;
+  padding-top: 10px;
+}
+
+.post.active {
+  display: block;
+}
+
+/*don't show images*/
+.post img , .post svg {
+  width: 0;
+  height: 0;
+}
+
+/* 
+speaker hover-state max widths
+as width of images is 300x300px
+*/
+.speaker .social-links {
+  max-width: 300px;
+}
+
+.speaker .hover-state {
+  max-width: 300px;
+}
+
+
+/*Bio on speaker hover*/
+.speaker .hover-state .bio {
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 280px;
+  color: #fff;
+}
+
+.speaker .hover-state .social-links {
+  position: absolute;
+  top: 80%;
+}
+
+.background-image {
+  height: 300px;
+  width: 300px;
+}
