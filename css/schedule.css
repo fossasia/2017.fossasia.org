@@ -285,7 +285,7 @@ a {
 
 @media (max-width: 600px) {
   .show-button-filter {
-    display: inline-block;
+    display: inline;
     margin: 0 auto;
     padding-bottom: 0;
     width: 40%; }
@@ -984,7 +984,7 @@ a {
     line-height: 24px; }
   @media only screen and (max-width: 600px) {
     .search-filter {
-      display: inline-block;
+      display: inline;
       float: none;
       width: 40%; }
       .search-filter .fossasia-filter {
@@ -1001,7 +1001,7 @@ a {
     margin-top: 10px;
     text-align: center; }
   .date-pill {
-    display: inline-block;
+    display: block;
     margin: 1%; } }
 
 .bookmark {
