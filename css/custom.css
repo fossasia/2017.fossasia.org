@@ -88,7 +88,7 @@
   height: 0;
 }
 
-/* 
+/*
 speaker hover-state max widths
 as width of images is 300x300px
 */
@@ -116,4 +116,14 @@ as width of images is 300x300px
 
 .background-image {
   width: 300px;
+}
+
+#morespeakers {
+  position: absolute;
+  right: 350px;
+}
+
+#googlecloud {
+  height: 200px;
+  width: 250px;
 }
