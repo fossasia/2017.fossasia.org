@@ -1983,7 +1983,7 @@ p.question {
   line-height: 80px;
 }
 .sponsor img {
-  max-width: 200px;
+  max-width: 150px;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;

@@ -1,33 +1,33 @@
 .schedule a {
-  color: white;
+  color: #E12B00;
   border: none;
 }
 
 .schedule a:hover {
-  color: white;
-  text-decoration: none;
+  color: #E12B00;
+  text-decoration: underline;
   border: none;
 };
 
 .schedule a:active {
-  color: white;
+  color: red;
   text-decoration: underline;
   border: none;
 }
 
 .schedule a:visited {
-  color: white;
+  color: #B82300;
   text-decoration: none;
   border: none;
 }
 
 .tweets-feed {
   color: #FFFFFF;
-  line-height: 30px;
+  line-height: 25px;
   font-size: 20px;
   transition: opacity 0.2s linear;
-  margin-bottom: 100px;
-  height: 100px;
+  margin-bottom: 20px;
+  height: 250px;
 }
 
 .tweets-feed a {
@@ -43,77 +43,58 @@
 .tweets-feed .dateTweeted {
   font-size: 15px;
   display: block;
+  text-align: center;
+  margin: 10px auto;
 }
 
-.icon.social_rss {
+.subscribe-1 .email-subscribe {
+  margin-bottom: 50px !important;
+}
+.newsletter-name{
+  padding-right: 0px;
+}
+.newsletter-name input{
+  border-radius: 10px 0px 0px 10px;
+}
+.newsletter-email{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.newsletter-email input{
+  border-radius: 0px;
+}
+.newsletter-submit{
+  padding-left: 0px;
+}
+.newsletter-submit input{
+  border-radius: 0px 10px 10px 0px;
+}
+.social-profiles a i{
+  transition: all .5s;
+}
+.social-profiles a:hover i{
+  color: grey;
+}
+.sticky-nav .menu li a:hover {
+  border-color: #C3BFBF;
+  border-bottom-width: 2px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.sidebar-content .widget ul li a:hover{
+  border-color: #C3BFBF;
+  border-bottom-width: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+/*css classes for hiding and showing Donation and regular supporter parts in donate.html*/
+.appear{
   display: block;
-  margin: 20px 0 10px;
 }
-
-#result {
-  overflow: hidden;
-}
-
-#result a, #result h3, #result h4 {
-  color: #fff !important;
-}
-
-#result h4 {
-  font-size: 1em;
-  padding: 10px 0;
-}
-
-.post {
+.hide{
   display: none;
-  padding: 20px 0;
 }
-
-.post > .content {
-  line-height: 1.2;
-}
-
-.link {
-  font-weight: 700;
-  font-size: 1.2em;
-  padding-top: 10px;
-}
-
-.post.active {
-  display: block;
-}
-
-/*don't show images*/
-.post img , .post svg {
-  width: 0;
-  height: 0;
-}
-
-/* 
-speaker hover-state max widths
-as width of images is 300x300px
-*/
-.speaker .social-links {
-  max-width: 300px;
-}
-
-.speaker .hover-state {
-  max-width: 300px;
-}
-
-
-/*Bio on speaker hover*/
-.speaker .hover-state .bio {
-  margin-left: 10px;
-  margin-right: 10px;
-  max-width: 280px;
-  color: #fff;
-}
-
-.speaker .hover-state .social-links {
-  position: absolute;
-  top: 80%;
-}
-
-.background-image {
-  width: 300px;
+.baddition{
+  margin-left:  600px;
 }
