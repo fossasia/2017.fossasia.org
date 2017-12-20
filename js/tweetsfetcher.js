@@ -3,71 +3,71 @@
 var interval_id = null;
 
 function Interval() {
-	if (interval_id !== null){
-		clearInterval(interval_id)
-		interval_id = window.setInterval(nextTweet, 6600); //6.6 secs
-	} else{
-		interval_id = window.setInterval(nextTweet, 6600); //6.6 secs
-	}
+  if (interval_id !== null){
+    clearInterval(interval_id)
+    interval_id = window.setInterval(nextTweet, 6600); //6.6 secs
+  } else{
+    interval_id = window.setInterval(nextTweet, 6600); //6.6 secs
+  }
 }
 
 function datafetcher() {
-	loklakFetcher.getTweets({}, datahandler);
-	Interval();
+  loklakFetcher.getTweets({}, datahandler);
+  Interval();
 }
 
 function datahandler(raw) {
-	stuff = raw;   //Makes the data available globally.
-	parser(stuff);
+  stuff = raw;   //Makes the data available globally.
+  parser(stuff);
 }
 
 var tweetNum = 0;
 
 function parseFunc(){
-	parser(stuff)
+  parser(stuff)
 }
 
 function nextTweet() {
-	tweetNum += 1;
-	var tweetsEl = document.getElementsByClassName('tweets-feed')[0];
-	//go back to the first tweet if it's greater than the amount of tweets available
-	if(tweetNum == tweetsEl.dataset.count) {
-		tweetNum = 0;
-	}
-	Interval();
-	document.getElementsByClassName('tweets-feed')[0].style.opacity =  0;
-	window.setTimeout(parseFunc, 560);
+  tweetNum += 1;
+  var tweetsEl = document.getElementsByClassName('tweets-feed')[0];
+  //go back to the first tweet if it's greater than the amount of tweets available
+  if(tweetNum == tweetsEl.dataset.count) {
+    tweetNum = 0;
+  }
+  Interval();
+  document.getElementsByClassName('tweets-feed')[0].style.opacity =  0;
+  window.setTimeout(parseFunc, 560);
 }
 function lastTweet() {
-	if (tweetNum > 0) {
-		tweetNum -= 1;
-		Interval();
-		document.getElementsByClassName('tweets-feed')[0].style.opacity =  0;
-		window.setTimeout(parseFunc, 560);
-	}
+  if (tweetNum > 0) {
+    tweetNum -= 1;
+    Interval();
+    document.getElementsByClassName('tweets-feed')[0].style.opacity =  0;
+    window.setTimeout(parseFunc, 560);
+  }
 }
 
 function parser(data) {
-	var parsed = ""
-	var tweet = data.statuses[tweetNum].text;
-	var words = tweet.split(" ");
-	var loklakLinkCount = 0;
-	for (word in words) {
-		if (words[word].startsWith("@")) {
-			parsed += "<a href='https://twitter.com/" + words[word].slice(1) + "' target='_blank'>" + words[word] + "</a> ";
-		} else if (words[word].startsWith("#")) {
-			parsed += "<a href='https://twitter.com/hashtag/" + words[word].slice(1) + "' target='_blank'>" + words[word] + "</a> ";
-		} else if (words[word].startsWith("http")) {
-			if (words[word].startsWith("http://loklak")) {
-				parsed += "<a href='" + data.statuses[tweetNum].links[loklakLinkCount] + "' target='_blank'>" + data.statuses[tweetNum].links[loklakLinkCount] + "</a> ";
-				loklakLinkCount += 1;
-			} else {
-				parsed += "<a href='" + words[word] + "' target='_blank' style='word-break:break-all'>" + words[word] + "</a> ";
-			}
-		} else {
-			parsed += words[word] + " ";
-		}
-	}
+  var parsed = ""
+  var tweet = data.statuses[tweetNum].text;
+  var words = tweet.split(" ");
+  var loklakLinkCount = 0;
+  for (word in words) {
+    if (words[word].startsWith("@")) {
+      parsed += "<a href='https://twitter.com/" + words[word].slice(1) + "' target='_blank'>" + words[word] + "</a> ";
+    } else if (words[word].startsWith("#")) {
+      parsed += "<a href='https://twitter.com/hashtag/" + words[word].slice(1) + "' target='_blank'>" + words[word] + "</a> ";
+    } else if (words[word].startsWith("http")) {
+      if (words[word].startsWith("https://loklak")) {
+        parsed += "<a href='" + data.statuses[tweetNum].links[loklakLinkCount] + "' target='_blank'>" + data.statuses[tweetNum].links[loklakLinkCount] + "</a> ";
+        loklakLinkCount += 1;
+      } else {
+        parsed += "<a href='" + words[word] + "' target='_blank' style='word-break:break-all'>" + words[word] + "</a> ";
+      }
+    } else {
+      parsed += words[word] + " ";
+    }
+  }
   var date = +new Date(data.statuses[tweetNum].created_at);
   var myDate = new Date();
   myDate = myDate.getTime();
@@ -75,8 +75,8 @@ function parser(data) {
   var difference = Math.round(difference/1000/3600/24);
   parsed += "<span class='dateTweeted'>Tweeted "+difference+" Days Ago</div>";
   
-	document.getElementsByClassName("tweets-feed")[0].innerHTML =  parsed;
-	document.getElementsByClassName("tweets-feed")[0].style.opacity =  1;
+  document.getElementsByClassName("tweets-feed")[0].innerHTML =  parsed;
+  document.getElementsByClassName("tweets-feed")[0].style.opacity =  1;
 }
 
 /* Taken from https://github.com/fossasia/fossasia-loklak-webtweets/blob/gh-pages/js/loklak-fetcher.js 
@@ -151,7 +151,7 @@ window.onload = (function() {
       }
       
       // Create the URL with all the parameters
-      var url = 'http://loklak.org/api/search.json' +
+      var url = 'https://api.loklak.org/api/search.json' +
         '?callback=loklakFetcher.handleData' +
         '&q=' + query +
         '&count=' + options.count +
