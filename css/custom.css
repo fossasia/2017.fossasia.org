@@ -98,3 +98,8 @@
 .baddition{
   margin-left:  600px;
 }
+
+.text-white {
+  color: white !important;
+  text-decoration: none !important;
+}
